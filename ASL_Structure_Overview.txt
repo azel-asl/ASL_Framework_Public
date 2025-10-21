@@ -1,0 +1,36 @@
+/* ===========================================================
+ASL™ Language Structure Overview
+© 2025 Erwin Layaoen | AZEL™ Studio — Patent Pending
+=========================================================== */
+
+     ┌────────────────────────────────────────────┐
+     │             AGENTIC SPEC LOOP (ASL)        │
+     └────────────────────────────────────────────┘
+                    │
+                    ▼
+          ┌────────────────────┐
+          │ 1. IDEA CAPTURE  │  → User defines core intent
+          └────────────────────┘
+                    │
+                    ▼
+          ┌────────────────────┐
+          │ 2. STRUCTURE     │  → System applies framework modules
+          └────────────────────┘
+                    │
+                    ▼
+          ┌────────────────────┐
+          │ 3. GENERATE      │  → Output draft via AI or human
+          └────────────────────┘
+                    │
+                    ▼
+          ┌────────────────────┐
+          │ 4. VALIDATE      │  → Check logic, psychology, consistency
+          └────────────────────┘
+                    │
+                    ▼
+          ┌────────────────────┐
+          │ 5. REFINE        │  → Iterate for precision and style
+          └────────────────────┘
+
+Every ASL framework (e.g., ASL_Inspired, ASL_SkinTexture, ASL_StoryKit)
+inherits this loop structure and adds domain-specific libraries or modules.
