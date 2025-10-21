@@ -1,5 +1,5 @@
 # ASL_Framework_Public
-Official public reference for the Agentic Spec Loop (ASL™) Framework — Patent Pending. https://stan.store/ErwinLayaoen
+Official public reference for the Agentic Spec Loop (ASL™) Framework — Patent Pending. https://stan.store/azelai
 # ASL™ — Agentic Spec Loop Framework  
 *(Patent Pending • © 2025 Erwin Layaoen | AZEL™ Studio)*  
 
