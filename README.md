@@ -7,7 +7,7 @@ Patent Pending — USPTO Filed October 28, 2025
 # ASL_Framework_Public
 
 > **ASL (Agentic Spec Loop™)**  
-> The world’s first plain-English language for on-prem, auditable agentic AI workflows —  
+> The world’s first plain-English language for auditable, agentic AI workflows —  
 > built for non-coders to turn ideas into secure, executable, and verifiable specifications.  
 
 *(Patent Pending – © 2025 Erwin Layaoen | AZEL™ Studio)*  
@@ -35,7 +35,7 @@ AI today is often opaque and difficult to verify.
 ASL solves this by introducing a **structured language for reasoning**, not just responses.  
 
 - No programming required.  
-- Runs inside any LLM — no special runtime.  
+- Runs inside any LLM — local, cloud, or hybrid.  
 - Produces explainable, auditable AI workflows.  
 - Designed for clarity, safety, and interoperability.  
 
