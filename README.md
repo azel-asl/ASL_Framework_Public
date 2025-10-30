@@ -1,58 +1,82 @@
+/* ===========================================================
+ASL Core Syntax Language v3.2
+© 2025 Erwin Layaoen | AZEL™ Studio | All Rights Reserved
+Patent Pending — USPTO Filed October 28, 2025
+=========================================================== */
+
 # ASL_Framework_Public
 
-**Official public reference for the Agentic Spec Loop (ASL™) System**  
+> **ASL (Agentic Spec Loop™)**  
+> The world’s first plain-English language for on-prem, auditable agentic AI workflows —  
+> built for non-coders to turn ideas into secure, executable, and verifiable specifications.  
+
 *(Patent Pending – © 2025 Erwin Layaoen | AZEL™ Studio)*  
 → [Stan Store — ASL Frameworks](https://stan.store/ErwinLayaoen)
 
 ---
 
-## Overview
+## 🧠 What Is ASL?
 
-The **ASL (Agentic Spec Loop)** System is the world’s first **agentic framework language** — a structured reasoning and synthesis language for AI systems and creative automation.  
-It transforms human intent into executable, auditable, and modular agent workflows.
+**ASL (Agentic Spec Loop™)** is a **plain-English, block-based language** that lets humans describe how an AI should think and act — step by step — without writing code.
 
-ASL is **not a prompt pack** — it’s a **language specification** that defines how reasoning, generation, and validation interact within agentic systems.
+It transforms ordinary text into structured instructions that large language models (LLMs) such as ChatGPT, Claude, Gemini, or Mistral can **interpret and execute directly**.
 
----
+Each `.asl` file represents a self-contained reasoning program.  
+LLMs can read it, run it, and explain every decision it makes — making AI logic transparent and auditable.
 
-## Core Architecture
-
-Each ASL framework follows a reasoning loop:
-Idea → Structure → Generate → Validate → Refine
-
-This loop defines how AI agents and humans co-author structured outputs such as:
-- Frameworks  
-- Story arcs  
-- Workflow plans  
-- Visual or narrative generators  
-- Agent orchestration scripts
+ASL is part of the **ASL_Core_Syntax™** and **ASL_HYPER™** engine family, created by **Erwin Layaoen** under **AZEL™ Studio**.  
+Patent filed **October 28, 2025** with the USPTO.
 
 ---
 
-## Components
+## 💡 Why It Matters
 
-| Component | Description |
-|------------|--------------|
-| **ASL_Core_Syntax™** | Defines ASL’s grammar, directive blocks (`::META`, `::AGENT`, `::FLOW`, etc.), and reasoning structure. |
-| **ASL_HYPER™ Engine** | Executes ASL files, orchestrates agent interactions, logs reasoning steps, and renders final outputs. |
-| **ASL_SkinTexture™ Pro** | Parametric realism engine for AI visuals with geometry preservation and lighting fidelity. |
-| **ASL_HookLadder™ / StoryStudio™ / ViralPostBuilder™** | Domain-specific frameworks built on ASL_Core_Syntax™ for creative storytelling, hook generation, and viral content automation. |
+AI today is often opaque and difficult to verify.  
+ASL solves this by introducing a **structured language for reasoning**, not just responses.  
+
+- No programming required.  
+- Runs inside any LLM — no special runtime.  
+- Produces explainable, auditable AI workflows.  
+- Designed for clarity, safety, and interoperability.  
+
+In short:  
+**ASL lets you describe intelligence, not just prompt it.**
 
 ---
 
-## Example Syntax
+## 🧩 Core Structure
+
+Each ASL file is composed of **readable directive blocks**.  
+
+| Block | Function |
+|--------|-----------|
+| `::META` | Defines name, version, and author |
+| `::INPUT` | Lists variables or user data |
+| `::AGENT` | Describes an AI’s role and task |
+| `::FLOW` | Determines the order agents execute |
+| `::OUTPUT` | Specifies what to display or return |
+| `::ASL_CHECKSUM` | Footer for file integrity and audit |
+
+All blocks end with `::END`.  
+Variables can be referenced using `{{double_braces}}`.
+
+---
+
+## 🧩 Example — ASL 101 Demo
+
+Copy-paste this into ChatGPT, Claude, or Gemini to see how ASL executes:
 
 ```asl
 /* ===========================================================
-BEGIN — ASL_Inspired — v3.2 Public Example
+BEGIN — ASL_Inspired — v3.2 Demo
 © 2025 Erwin Layaoen | AZEL™ Studio | Patent Pending
 =========================================================== */
 
 ::META
 Name: ASL_Inspired
-Category: Narrative & Creative Reasoning
 Version: v3.2
-License: Public Reference Build
+Category: Narrative Reasoning
+License: Public Demo
 ::END
 
 ::INPUT
@@ -72,12 +96,11 @@ output: json
 ::END
 
 ::AGENT craft
-role: Hook & Beat Writer
+role: Hook Writer
 task: |
   Using {{analyze}}, write:
-    3 hooks (≤ 12 words),
-    a 5-beat outline for a {{format}},
-    and a single CTA in {{tone}} tone.
+    3 hooks (≤ 12 words)
+    and a short CTA in {{tone}} tone.
 output: markdown
 ::END
 
@@ -91,21 +114,43 @@ RUN analyze -> craft
 
 ::ASL_CHECKSUM
 
-Patent Status
+When executed, the model:
+	1.	Reads each block.
+	2.	Runs the agents in order.
+	3.	Returns a structured, auditable output.
 
-Protected under active US Provisional Patent Filings:
-	•	ASL_Core_Syntax™ Framework — Filed Oct 28 2025
-	•	ASL_HYPER™ Engine — Filed Oct 28 2025
-	•	Part of the Agentic Spec Loop (ASL™) System Family
+⸻
 
-Usage & License
+⚙️ Key Characteristics
+	•	Plain-English Syntax: Understandable by both humans and LLMs.
+	•	Executable: Runs natively inside language models — no runtime required.
+	•	Auditable: Every step can be logged and reviewed.
+	•	Modular: Extendable through future directives (e.g., ::CONNECT, ::DEFINE).
+	•	Secure: Integrity verified by ::ASL_CHECKSUM and encryption hooks in private builds.
 
-Educational and non-commercial reference use only.
-Do not redistribute, resell, rebrand, or train AI models on ASL syntax or derivative frameworks without written authorization.
+License & Attribution
 
-For commercial or research collaboration → elayaoen@me.com
+This repository is for educational and reference purposes only.
+Do not redistribute, modify, or use ASL frameworks for commercial purposes without written authorization.
 
-Official Links
-	•	Creator: Erwin Layaoen | AZEL™ Studio
-	•	Official Product Store: Stan Store — ASL Frameworks￼
-	•	Reference Repo: ASL_Framework_Public (GitHub)
+For licensing inquiries or research collaborations → elayaoen@me.com￼
+
+⸻
+
+⚖️ Patent Notice
+
+Protected under U.S. Provisional Patent Applications (Filed Oct 28, 2025):
+	•	ASL_Core_Syntax™ — “Block-Based Language for Agentic AI Workflows”
+	•	ASL_HYPER™ Engine — “Multi-Format Content Transformation Engine”
+
+Filed as a Continuation-in-Part (CIP) within the Agentic Spec Loop™ patent family.
+No prior published system defines a plain-English, block-delimited, executable language for AI reasoning.
+
+⸻
+
+Created by: Erwin Layaoen
+Company: AZEL™ Studio
+🌐 stan.store/ErwinLayaoen￼ 📧 elayaoen@me.com￼
+
+“ASL turns human reasoning into code-free, auditable AI execution —
+the missing language layer for the agentic era.”
