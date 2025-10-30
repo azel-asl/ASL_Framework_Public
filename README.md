@@ -6,7 +6,7 @@
 
 ---
 
-## 🧩 Overview
+## Overview
 
 The **ASL (Agentic Spec Loop)** System is the world’s first **agentic framework language** — a structured reasoning and synthesis language for AI systems and creative automation.  
 It transforms human intent into executable, auditable, and modular agent workflows.
@@ -15,7 +15,7 @@ ASL is **not a prompt pack** — it’s a **language specification** that define
 
 ---
 
-## 🧠 Core Architecture
+## Core Architecture
 
 Each ASL framework follows a reasoning loop:
 Idea → Structure → Generate → Validate → Refine
@@ -29,7 +29,7 @@ This loop defines how AI agents and humans co-author structured outputs such as:
 
 ---
 
-## ⚙️ Components
+## Components
 
 | Component | Description |
 |------------|--------------|
@@ -40,7 +40,7 @@ This loop defines how AI agents and humans co-author structured outputs such as:
 
 ---
 
-## 🧩 Example Syntax
+## Example Syntax
 
 ```asl
 /* ===========================================================
