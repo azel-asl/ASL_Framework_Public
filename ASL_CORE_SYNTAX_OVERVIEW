@@ -1,0 +1,53 @@
+/* ===========================================================
+ASL_Core_Syntax™ — v3.2 Public Specification Summary
+© 2025 Erwin Layaoen | AZEL™ Studio — Patent Pending
+=========================================================== */
+
+STRUCTURE
+---------
+All ASL programs are composed of namespaced blocks:
+
+   ::BLOCK_NAME
+       ...instructions...
+   ::END
+
+Core Block Types:
+   ::META        → Framework identity, version, license
+   ::INPUT       → Key variables or parameters
+   ::AGENT       → Role-based reasoning or task execution block
+   ::FLOW        → Execution sequence (e.g. RUN analyze -> craft)
+   ::OUTPUT      → Final result rendering
+   ::ASL_CHECKSUM→ Integrity validation footer
+
+ADVANCED / RESERVED
+-------------------
+   ::ASL_STARTUP / ::ASL_END / IDLE_TIMEOUT   → Session control
+   ::PLUGIN / CONNECT                         → Cross-framework linking
+   ::DEFINE                                   → Parametric syntax expansion
+   if / switch / listen_for / on_fail         → Conditional routing
+   AES-256 encrypted communication layer      → Secure inter-agent exchange
+   SLM                                        → Session Language Memory (optional extension)
+
+EXECUTION MODEL
+---------------
+1. Parse all ::BLOCK ... ::END segments
+2. Resolve variables {{var}} across scope
+3. Execute agents as declared in ::FLOW
+4. Apply conditional directives as encountered
+5. Emit ::OUTPUT and ::ASL_CHECKSUM
+
+PURPOSE
+-------
+Provide a human-readable, machine-executable DSL
+for directing multi-agent LLM operations without an external runtime.
+
+SECURITY
+--------
+ASL incorporates input sanitization, encryption, and integrity markers
+to ensure traceable, tamper-resistant operation.
+
+NOTE
+----
+This syntax is legally protected under
+“ASL Core Syntax Language v3.2: Modular Block-Based DSL for Agentic LLM Orchestration”
+filed October 28, 2025 as a continuation-in-part of ASL_HYPER™.
