@@ -1,5 +1,5 @@
 /* ===========================================================
-ASL™ Language Structure Overview — v3.2
+ASL™ Language Structure Overview — v3.2 (Formal Grammar Edition)
 © 2025 Erwin Layaoen | AZEL™ Studio — Patent Pending
 =========================================================== */
 
@@ -14,72 +14,84 @@ ASL™ Language Structure Overview — v3.2
                          │
                          ▼
           ┌────────────────────────────┐
-          │ 2. STRUCTURE MAPPING       │  → Match the intent to a modular framework.
-          │                             │    (e.g., narrative, workflow, image, data)
+          │ 2. STRUCTURE MAPPING       │  → Map the intent to a framework archetype.
+          │                             │    (e.g., narrative, logic chain, workflow)
           └────────────────────────────┘
                          │
                          ▼
           ┌────────────────────────────┐
-          │ 3. GENERATE                │  → AI and/or human agent expands structured output.
-          │                             │    (text, visuals, logic, or hybrid)
+          │ 3. GENERATE                │  → Agents produce structured reasoning output.
+          │                             │    (text, visuals, or hybrid)
           └────────────────────────────┘
                          │
                          ▼
           ┌────────────────────────────┐
-          │ 4. VALIDATE                │  → Verify reasoning, tone, and consistency.
-          │                             │    (psychological, logical, or stylistic)
+          │ 4. VALIDATE                │  → Verify tone, accuracy, and context.
+          │                             │    (auditable reasoning and checksum)
           └────────────────────────────┘
                          │
                          ▼
           ┌────────────────────────────┐
-          │ 5. REFINE                  │  → Iterate, simplify, or elevate quality.
-          │                             │    (loop until precision and clarity achieved)
+          │ 5. REFINE                  │  → Iterate or elevate quality.
+          │                             │    (loop until precision achieved)
           └────────────────────────────┘
 
 ─────────────────────────────────────────────────────────────
 STRUCTURAL SUMMARY
 ─────────────────────────────────────────────────────────────
 
-Every ASL Framework (e.g., ASL_Inspired, ASL_SkinTexture, ASL_StoryKit)
+Every ASL Framework (e.g., ASL_StoryKit, ASL_SkinTexture, ASL_Inspired)
 inherits this 5-stage reasoning loop.
 
-Each loop instance is expressed through **ASL_Core_Syntax™** blocks:
+Each instance of the loop is expressed through **ASL_Core_Syntax™** blocks:
 
-  ::META        → defines framework identity, version, license
-  ::INPUT       → collects key variables or user prompts
-  ::AGENT       → defines specialized reasoning or generation agents
-  ::FLOW        → establishes agent execution order (e.g., RUN analyze -> craft)
-  ::OUTPUT      → renders interpolated or final structured result
-  ::ASL_CHECKSUM → logs and validates integrity
+  ::META          → Defines identity, author, version, and license
+  ::INPUT         → Captures variables, prompts, or parameters
+  ::AGENT         → Defines a reasoning role or AI task block
+  ::FLOW          → Establishes execution chain (e.g., RUN analyze → craft)
+  ::OUTPUT        → Defines rendered or final structured result
+  ::ASL_CHECKSUM  → Validates execution trace and integrity
+  ::PLUGIN        → Integrates external modules or APIs
+  ::CONNECT       → Links additional ASL frameworks or agents
+  ::DEFINE        → Declares reusable constants or functions
+  ::ASL_STARTUP   → Initializes runtime context before flow execution
 
 ─────────────────────────────────────────────────────────────
 ENGINE RELATIONSHIP
 ─────────────────────────────────────────────────────────────
 
 **ASL_Core_Syntax™**
-- Defines grammar, logic structure, and directive format.
-- Ensures interoperability between frameworks.
-- Provides validation, clarity, and modular reusability.
+- Defines the language grammar (see `asl.ebnf`)
+- Enforces structural integrity, validation, and auditability
+- Enables human-readable orchestration for multi-agent systems
 
 **ASL_HYPER™ Engine**
-- Executes ASL Core Syntax files.
-- Manages data flow, variable interpolation, and output formatting.
-- Logs reasoning steps and performance metrics (for private builds).
+- Executes ASL_Core_Syntax™ programs
+- Handles data flow, variable substitution, and context memory
+- Logs execution steps for reproducibility and audit
+- Compatible with ChatGPT, Claude, Gemini, Mistral, and local LLMs
 
 ─────────────────────────────────────────────────────────────
-USAGE MODEL
+EXECUTION MODEL (v3.2 Runtime Flow)
 ─────────────────────────────────────────────────────────────
 
-1. User provides natural input (intent, idea, tone, etc.)
-2. ASL_Core_Syntax™ parses structure and activates agents.
-3. Agents collaborate via defined ::FLOW sequence.
-4. ASL_HYPER™ executes reasoning chain, merges outputs.
-5. ::OUTPUT block returns final human-readable or machine-parseable result.
+1. **Parse** — Lexer + Parser tokenize blocks and build AST
+2. **Validate** — Runtime verifies structure and checksum
+3. **Initialize** — Load plugins, variables, context memory
+4. **Execute** — Agents run sequentially or concurrently per ::FLOW
+5. **Output** — Final ::OUTPUT block returns structured results
+6. **Terminate** — SHA-256 checksum logged for audit
 
 ─────────────────────────────────────────────────────────────
-NOTES
+PHILOSOPHY
 ─────────────────────────────────────────────────────────────
 
-- ASL emphasizes **traceable creativity** — every reasoning step can be logged, audited, and refined.
-- Frameworks can be applied to both **creative** and **technical** systems.
-- Syntax is language-agnostic and designed for AI safety, clarity, and modular scalability.
+- ASL transforms **human reasoning into executable structure**
+- Designed for **non-coders** yet formally defined for AI validation
+- Enables **traceable creativity** — each output can be inspected, verified, and refined
+- Functions as the missing **language layer** between LLM reasoning and software logic
+- Frameworks remain **language-agnostic**, ensuring safe, modular, auditable AI systems
+
+─────────────────────────────────────────────────────────────
+END OF DOCUMENT
+─────────────────────────────────────────────────────────────
