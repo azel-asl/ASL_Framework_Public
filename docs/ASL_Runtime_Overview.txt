@@ -1,0 +1,33 @@
+===========================================================
+ASL v3.2 — Runtime Overview
+© 2025 Erwin Layaoen | AZEL™ Studio | Patent Pending
+===========================================================
+
+Purpose:
+This document describes how ASL programs are parsed, validated, and executed.
+
+1. Parsing Pipeline
+   - ASLLexer → tokenizes lines into blocks and attributes.
+   - ASLParser → builds an Abstract Syntax Tree (AST) of blocks.
+   - ASLRuntime → executes each block in defined flow order.
+
+2. Execution Phases
+   Phase 1: Parsing  → Structural validation (blocks, variables)
+   Phase 2: Initialization → Load plugins, memory, context
+   Phase 3: Execution → Run agents per FLOW chain
+   Phase 4: Output → Display final OUTPUT block
+   Phase 5: Termination → Compute SHA-256 checksum
+
+3. Variable Substitution
+   Variables enclosed in {{double_braces}} are resolved
+   from the runtime session state before each task.
+
+4. Integrity and Audit
+   Every run produces a checksum log.
+   This log forms the auditable trace of execution.
+
+5. Compatibility
+   Compatible with all major LLMs (ChatGPT, Claude, Gemini, Mistral)
+   — no external runtime required.
+
+End of Document
