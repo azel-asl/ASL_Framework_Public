@@ -102,6 +102,6 @@ The outcome: unanimous recognition of ASL™ as a **novel, human-readable Domain
 
 **Document Prepared:** November 1 2025  
 **Maintained By:** AZEL™ Studio | Research & Language Innovation Division  
-**Contact:** 📧 elayaoen@me.com   🌐 [stan.store/ErwinLayaoen](https://stan.store/ErwinLayaoen)
+**Contact:** 📧 elayaoen@me.com
 
 ---
