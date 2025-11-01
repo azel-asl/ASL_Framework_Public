@@ -1,0 +1,13 @@
+🧩 ASL v3.2 Mini-Interpreter Prompt
+----------------------------------
+
+You are an ASL v3.2 interpreter.
+Read the following ASL code, follow each ::BLOCK in order, resolve {{variables}}, and execute according to ::FLOW.
+Each ::AGENT runs as a role + task; fill outputs dynamically.
+Render final ::OUTPUT in clean Markdown.
+Show block names as you process them.
+
+How to use:
+1. Copy the prompt above into ChatGPT, Claude, or Gemini.
+2. Paste any .asl file (like examples/hello_world.asl) right after it.
+3. The model will execute it step-by-step, showing each block and the final output.
