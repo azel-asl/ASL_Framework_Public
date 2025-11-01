@@ -30,11 +30,13 @@ You’ll see each block execute in order and produce structured output.
 ---
 
 ## ✅ ASL Hello Workflow Result
-Hello Raisa — I’m your AI Guide.
+```
+Hello Raisa — I’m your AI Guide.  
 ASL is a language for coordinating multiple AI agents through readable blocks instead of code.
 
-Each block (::AGENT greet, ::AGENT explain) runs in sequence using the ::FLOW chain.
+Each block (::AGENT greet, ::AGENT explain) runs in sequence using the ::FLOW chain.  
 Variables like {{user}} connect outputs between agents, and ::OUTPUT defines the final display.
+```
 
 ---
 
@@ -78,21 +80,21 @@ To mark official releases:
 git tag -a v3.2 -m "Official ASL v3.2 reference release"
 git push origin v3.2
 ```
-⚖️ Patent Notice
 
-Protected under U.S. Provisional Patent Applications (Filed Oct 28, 2025):
-	•	ASL_Core_Syntax™ — “Block-Based Language for Agentic AI Workflows”
-	•	ASL_HYPER™ Engine — “Multi-Format Content Transformation Engine”
+---
 
-Filed as a Continuation-in-Part (CIP) within the Agentic Spec Loop™ patent family.
+## ⚖️ Patent Notice
+Protected under U.S. Provisional Patent Applications (Filed Oct 28, 2025):  
+- **ASL_Core_Syntax™** — “Block-Based Language for Agentic AI Workflows”  
+- **ASL_HYPER™ Engine** — “Multi-Format Content Transformation Engine”  
+
+Filed as a Continuation-in-Part (CIP) within the **Agentic Spec Loop™** patent family.  
 No prior published system defines a plain-English, block-delimited, executable language for AI reasoning.
 
-⸻
+---
 
-Created by: Erwin Layaoen
-Company: AZEL™ Studio
-🌐 stan.store/ErwinLayaoen￼ 📧 elayaoen@me.com
+Created by: **Erwin Layaoen**  
+Company: **AZEL™ Studio**  
+🌐 [stan.store/ErwinLayaoen](https://stan.store/ErwinLayaoen) 📧 elayaoen@me.com  
 
-“ASL turns human reasoning into code-free, auditable AI execution — the missing language layer for the agentic era.”
-
-
+> “ASL turns human reasoning into code-free, auditable AI execution — the missing language layer for the agentic era.”
