@@ -1,0 +1,45 @@
+(* ===========================================================
+ASL Core Syntax Language v3.2 - Formal Grammar Specification
+© 2025 Erwin Layaoen | AZEL™ Studio | Patent Pending
+=========================================================== *)
+
+asl_program     = { block | directive | comment } ;
+
+block           = block_start , block_body , block_end ;
+block_start     = "::" , block_name , [ whitespace , block_attributes ] ;
+block_end       = "::END" ;
+block_body      = { statement | nested_block } ;
+
+block_name      = "META" | "INPUT" | "AGENT" | "FLOW" | "OUTPUT" | "ASL_CHECKSUM" 
+                | "ASL_STARTUP" | "PLUGIN" | "CONNECT" | "DEFINE" 
+                | "VOICE_INPUT" | "GESTURE_INPUT" ;
+
+block_attributes = attribute , { whitespace , attribute } ;
+attribute        = identifier , ":" , value ;
+
+statement        = assignment | conditional | loop | output_statement | plugin_statement ;
+assignment       = identifier , "=" , expression ;
+conditional      = if_statement | switch_statement ;
+if_statement     = "if" , condition , ":" , statement_block , [ "else" , ":" , statement_block ] ;
+switch_statement = "switch" , expression , ":" , { case_clause } ;
+case_clause      = "case" , value , ":" , statement_block ;
+loop             = "for" , identifier , "in" , expression , ":" , statement_block ;
+output_statement = "OUTPUT" , expression ;
+plugin_statement = "::PLUGIN" , string_literal ;
+
+condition        = expression , comparison_operator , expression ;
+comparison_operator = "==" | "!=" | "<" | ">" | "<=" | ">=" ;
+
+expression       = literal | variable_reference | function_call ;
+variable_reference = "{{" , identifier , "}}" ;
+function_call    = identifier , "(" , [ argument_list ] , ")" ;
+argument_list    = expression , { "," , expression } ;
+
+literal          = string_literal | number_literal | boolean_literal ;
+string_literal   = '"' , { character } , '"' ;
+number_literal   = [ "-" ] , digit , { digit } , [ "." , digit , { digit } ] ;
+boolean_literal  = "true" | "false" ;
+
+identifier       = letter , { letter | digit | "_" } ;
+statement_block  = statement , { statement } ;
+comment          = "#" , { character } , "\n" ;
