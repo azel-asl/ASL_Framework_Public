@@ -64,7 +64,7 @@ It abstracts complex code into transparent, auditable specs that LLMs can execut
 ## 🧾 Licensing
 **Free for research and educational use.**  
 **Commercial use requires a license.**  
-Contact `licensing@azelstudio.com` for terms.  
+Contact `elayaoen@me.com` for terms.  
 *(© 2025 Erwin Layaoen | AZEL™ Studio | Patent Pending)*
 
 ---
