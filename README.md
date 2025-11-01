@@ -27,6 +27,7 @@ This turns the model into an **ASL interpreter** that understands `::BLOCKS`, va
 Paste the file’s content into the same chat session.  
 You’ll see each block execute in order and produce structured output.
 
+> 📄 See a full sample run log: [`docs/HELLO_Workflow_Run.md`](docs/HELLO_Workflow_Run.md)
 ---
 
 ## ✅ ASL Hello Workflow Result
