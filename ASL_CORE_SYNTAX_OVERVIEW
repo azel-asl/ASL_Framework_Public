@@ -1,53 +1,71 @@
 /* ===========================================================
-ASL_Core_Syntax™ — v3.2 Public Specification Summary
+ASL_Core_Syntax™ — v3.2 Formal Grammar & Execution Summary
 © 2025 Erwin Layaoen | AZEL™ Studio — Patent Pending
 =========================================================== */
 
 STRUCTURE
 ---------
-All ASL programs are composed of namespaced blocks:
+All ASL programs are composed of modular, namespaced blocks:
 
    ::BLOCK_NAME
        ...instructions...
    ::END
 
 Core Block Types:
-   ::META        → Framework identity, version, license
-   ::INPUT       → Key variables or parameters
-   ::AGENT       → Role-based reasoning or task execution block
-   ::FLOW        → Execution sequence (e.g. RUN analyze -> craft)
-   ::OUTPUT      → Final result rendering
-   ::ASL_CHECKSUM→ Integrity validation footer
+   ::META          → Framework identity, version, author, license
+   ::INPUT         → Key variables, prompts, or parameters
+   ::DEFINE        → Declare reusable constants or functions
+   ::AGENT         → Role-based reasoning or generation unit
+   ::FLOW          → Execution order (e.g. RUN analyze → craft)
+   ::OUTPUT        → Rendered or final structured output
+   ::ASL_CHECKSUM  → Integrity validation and log signature
 
 ADVANCED / RESERVED
 -------------------
    ::ASL_STARTUP / ::ASL_END / IDLE_TIMEOUT   → Session control
-   ::PLUGIN / CONNECT                         → Cross-framework linking
-   ::DEFINE                                   → Parametric syntax expansion
-   if / switch / listen_for / on_fail         → Conditional routing
-   AES-256 encrypted communication layer      → Secure inter-agent exchange
-   SLM                                        → Session Language Memory (optional extension)
+   ::PLUGIN / ::CONNECT                        → Cross-framework linking or API integration
+   if / switch / listen_for / on_fail          → Conditional routing and recovery
+   AES-256 encrypted communication layer       → Secure inter-agent exchange
+   SLM (Session Language Memory)               → Persistent session reasoning memory
+   TRACE / DEBUG                               → Diagnostic and audit logging directives
 
 EXECUTION MODEL
 ---------------
-1. Parse all ::BLOCK ... ::END segments
-2. Resolve variables {{var}} across scope
-3. Execute agents as declared in ::FLOW
-4. Apply conditional directives as encountered
-5. Emit ::OUTPUT and ::ASL_CHECKSUM
+1. Parse all ::BLOCK ... ::END segments via lexer/parser.
+2. Resolve variables {{var}} across global and local scope.
+3. Execute ::ASL_STARTUP if defined.
+4. Follow ::FLOW to invoke ::AGENT blocks in declared order.
+5. Apply conditional or recovery directives as encountered.
+6. Generate ::OUTPUT and finalize ::ASL_CHECKSUM hash (SHA-256).
+7. Log runtime trace (optional private builds).
 
 PURPOSE
 -------
-Provide a human-readable, machine-executable DSL
-for directing multi-agent LLM operations without an external runtime.
+ASL_Core_Syntax™ defines the formal grammar and directive set
+for the Agentic Spec Loop™ family of frameworks.
+
+It provides a human-readable, machine-executable DSL
+for orchestrating multi-agent LLM operations without external runtimes —
+bridging human intent and structured AI behavior through auditable syntax.
 
 SECURITY
 --------
-ASL incorporates input sanitization, encryption, and integrity markers
-to ensure traceable, tamper-resistant operation.
+ASL incorporates:
+- Encrypted variable passing (AES-256)
+- Checksum-based integrity verification
+- Input sanitization and trace logging
+- Tamper detection for public and private builds
+
+VERSION ALIGNMENT
+-----------------
+ASL_Core_Syntax™ v3.2 is synchronized with:
+- ASL_HYPER™ Engine v3.2 Runtime Specification
+- ASL_Parser.py (Reference Lexer/Runtime)
+- ASL_Structure_Overview.txt (Framework Hierarchy)
+- ASL_Runtime_Overview.txt (Execution Pipeline)
 
 NOTE
 ----
 This syntax is legally protected under
 “ASL Core Syntax Language v3.2: Modular Block-Based DSL for Agentic LLM Orchestration”
-filed October 28, 2025 as a continuation-in-part of ASL_HYPER™.
+filed October 28, 2025 as a continuation-in-part (CIP) of ASL_HYPER™.
